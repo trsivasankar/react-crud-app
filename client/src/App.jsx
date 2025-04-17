@@ -17,10 +17,22 @@ function App() {
   const [editUser, setEditUser] = useState(null);
 
   const getUsers = async () => {
-    await axios.get(BASE_URL).then((res) => {
+    try {
+      const res = await axios.get(`${BASE_URL}/users`);
       setusers(res.data);
       setfilterData(res.data);
-    })
+    } catch (err) {
+      console.warn("Initial API call failed, retrying in 2s...");
+      setTimeout(async () => {
+        try {
+          const retryRes = await axios.get(`${BASE_URL}/users`);
+          setusers(retryRes.data);
+          setfilterData(retryRes.data);
+        } catch (finalErr) {
+          console.error("Failed after retry:", finalErr);
+        }
+      }, 2000);
+    }
   }
 
   useEffect(() => {
