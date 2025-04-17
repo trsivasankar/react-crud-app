@@ -126,7 +126,7 @@ function App() {
           <tbody>
             {filterData && filterData.map((user, index) => {
               return (<tr key={index}>
-                <td>{index}</td>
+                <td>{index  + 1}</td>
                 <td>{user.username}</td>
                 <td>{user.age}</td>
                 <td>{user.city}</td>
