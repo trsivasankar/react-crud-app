@@ -13,7 +13,7 @@ const port = 3000;
 
 
 app.use(cors({
-    origin: "https://react-crud-app-gamma.vercel.app/",
+    origin: "https://react-crud-app-gamma.vercel.app",
     methods: ['GET', 'POST', 'PATCH', 'DELETE'],
   }));
 
