@@ -4,6 +4,7 @@ import './App.css'
 
 function App() {
 
+  const BASE_URL = "https://react-crud-app-6x5e.onrender.com";
 
   const [users, setusers] = useState([]);
   const [filterData, setfilterData] = useState([]);
@@ -16,7 +17,7 @@ function App() {
   const [editUser, setEditUser] = useState(null);
 
   const getUsers = async () => {
-    await axios.get("http://localhost:3000/users").then((res) => {
+    await axios.get(BASE_URL).then((res) => {
       setusers(res.data);
       setfilterData(res.data);
     })
@@ -40,7 +41,7 @@ function App() {
     const confirmDelete = window.confirm("Are you sure you want to delete this user?");
     if (!confirmDelete) return;
 
-    await axios.delete(`http://localhost:3000/users/${id}`).then((res) => {
+    await axios.delete(`${BASE_URL}/users/${id}`).then((res) => {
       setusers(res.data);
       setfilterData(res.data);
     })
@@ -66,7 +67,7 @@ function App() {
 
   const handleAddUser = async () => {
     try {
-      const res = await axios.post("http://localhost:3000/users", newUser);
+      const res = await axios.post(`${BASE_URL}/users`, newUser);
       setusers(res.data);
       setfilterData(res.data);
       setShowModal(false);
@@ -78,7 +79,7 @@ function App() {
 
   const handleUpdateUser = async () => {
     try {
-      const res = await axios.patch(`http://localhost:3000/users/${editUser.id}`, editUser);
+      const res = await axios.patch(`${BASE_URL}/${editUser.id}`, editUser);
       setusers(res.data);
       setfilterData(res.data);
       setShowModal(false);
