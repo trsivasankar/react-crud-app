@@ -1,0 +1,62 @@
+[
+  {
+    "id": 2,
+    "username": "Kumar",
+    "age": 25,
+    "city": "Vellore"
+  },
+  {
+    "id": 3,
+    "username": "Rajesh",
+    "age": 32,
+    "city": "Salem"
+  },
+  {
+    "id": 4,
+    "username": "Dakshiga",
+    "age": 30,
+    "city": "Arni"
+  },
+  {
+    "id": 5,
+    "username": "Mokesh",
+    "age": 18,
+    "city": "Bangalore"
+  },
+  {
+    "id": 6,
+    "username": "Raju",
+    "age": 20,
+    "city": "Pune"
+  },
+  {
+    "id": 7,
+    "username": "John",
+    "age": 25,
+    "city": "Mumbai"
+  },
+  {
+    "id": 8,
+    "username": "Jonus",
+    "age": 35,
+    "city": "New York"
+  },
+  {
+    "id": 1744869455489,
+    "username": "Sivasankar",
+    "age": "32",
+    "city": "Chennai"
+  },
+  {
+    "id": 1744869858330,
+    "username": "Sivasankar",
+    "age": "25",
+    "city": "chennai"
+  },
+  {
+    "id": 1744870138816,
+    "username": "Siva",
+    "age": "30",
+    "city": "chennai"
+  }
+]
